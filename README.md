@@ -1,4 +1,78 @@
-Basic Description:
+INSTALLATION
+
+1 - Extract the contents of this .zip package to any persistent path 
+in your ESXi server, i.e: /vmfs/volumes/datastore1/xsi-dir
+
+2 - Change to the installation directory and apply permissions to 
+the xsibackup file and the bin folder.
+
+	# chmod -R 0700 xsibackup bin
+
+3 - Run xsibackup
+
+	#./xsibackup --help
+		
+
+TRIAL VERSION LIMITATIONS
+
+Trial version is limited to 6 hours of use after each host reboot. 
+You may reboot your host and use the program for 6 more hours and 
+so on.
+
+Trial versions are limited to 20 GB or 40 GB depending on the 
+type of trial license. 
+
+All other actions are fully enabled: --check, --restore, --repair, 
+--info, --prune, etc...
+
+You may use a trial version as a fully enabled server in any SSH 
+enabled host. It's only the client that is limited by the the trial 
+version license limits.
+
+KNOWN ISSUES
+
+You will get this error message after an ESXi reboot when trying to 
+perform an over IP/SSH backup.
+
+2019-06-21T17:44:27 | Error code 668 at file xsibackup.c, line 668
+Error description: cannot access SSH server at root@192.168.100.23:22, 
+response was: Warning: Permanently added '192.168.3.244' (RSA) to the 
+list of known hosts
+
+It's just a warning about the key having been re-added to the 
+known_hosts file of the ESXi server. Just execute the command again. 
+We will fix this in future releases.
+
+ABOUT TRANSFER SPEED.
+
+(c)XSIBackup Datacenter has been tested on commodity hardware and 
+on many different chipsets. It is a low level piece of software 
+aimed at reaching the hardware theoretical limit, nonetheless it 
+can't go beyond that limit.
+
+If you want to achieve close to gigabit LAN speeds (70-80 MB/s), 
+in effective data throughput, you need hardware which is capable 
+of reaching that speed and sustain it for a long period of time. 
+We recommend that you always use Intel NICs. There may be other 
+brands that manufacture quality NICs, but Intel NICs are the only 
+ones from our experience that always offer maximum performance.
+
+We'll put it the other way around. If you use Realtek NICs and 
+TP-Link switches, you can't expect to achieve more than 15-20 MB/s 
+of effective throughput, it doesn't have anything to do with ESXi 
+being limited in speed or XSIBackup not being fast enough, it's 
+your network hardware.
+
+You can buy decent gigabit switches al bargain prices from 
+manufacturers like Microtik. If you can afford HP Pro-curve or Cisco 
+great, but you don't really need to spend that much.
+
+In regards to the above mentioned manufacturers (Realtek and TP-Link) 
+don't get us wrong, they manufacture awesome hardware for its cost. We 
+use those brands, but we use them to browse the Internet and read 
+e-mails, not to transfer terabyte virtual disks. 
+
+DESCRIPTION:
 
 ©XSIBackup-Datacenter is a software solution developed in plain C, having the GLibC library as its main dependency. It follows the same basic design principles of previous XSIBackup releases, namely: an efficient backup and replication tool that can be used directly in any ESXi or Linux host. 
 As per the time of writing these words ©XSIBackup-Datacenter can replicate & backup Virtual Machines hosted in ESXi servers just like ©XSIBackup-Free and ©XSIBackup-Pro do and can also backup & replicate file structures in Linux servers both as replicas or as backups to deduplicated repositories.
