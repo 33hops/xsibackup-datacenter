@@ -1,6 +1,6 @@
 INSTALLATION
 
-1 - Extract the contents of this .zip package to any persistent path 
+1 - Extract the contents of the .zip package to any persistent path 
 in your ESXi server, i.e: /vmfs/volumes/datastore1/xsi-dir
 
 2 - Change to the installation directory and apply permissions to 
