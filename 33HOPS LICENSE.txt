@@ -1,0 +1,9 @@
+Copyright 2019 | Daniel Jesús García Fidalgo
+33HOPS, Sistemas de Información y Redes, S.L.
+
+You are allowed to use this software for personal or 
+commercial use. You are allowed to redistribute it
+without any modification.
+
+This program is distributed as is WITHOUT ANY WARRANTY; 
+USE AT YOUR OWN RISK.
