@@ -1,3 +1,5 @@
+Get a 40 GB limit version at https://33hops.com/xsibackup-datacenter-vmware-esxi-backup.html
+
 INSTALLATION
 
 1 - Extract the contents of the .zip package to any persistent path 
