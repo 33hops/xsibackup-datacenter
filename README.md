@@ -1,4 +1,4 @@
-Get a 40 GB limit version at https://33hops.com/xsibackup-datacenter-vmware-esxi-backup.html
+Get a 60 GB limit version at https://33hops.com/xsibackup-datacenter-vmware-esxi-backup.html
 
 INSTALLATION
 
