@@ -31,20 +31,6 @@ You may use a trial version as a fully enabled server in any SSH
 enabled host. It's only the client that is limited by the the trial 
 version license limits.
 
-KNOWN ISSUES
-
-You will get this error message after an ESXi reboot when trying to 
-perform an over IP/SSH backup.
-
-2019-06-21T17:44:27 | Error code 668 at file xsibackup.c, line 668
-Error description: cannot access SSH server at root@192.168.100.23:22, 
-response was: Warning: Permanently added '192.168.3.244' (RSA) to the 
-list of known hosts
-
-It's just a warning about the key having been re-added to the 
-known_hosts file of the ESXi server. Just execute the command again. 
-We will fix this in future releases.
-
 ABOUT TRANSFER SPEED.
 
 (c)XSIBackup Datacenter has been tested on commodity hardware and 
